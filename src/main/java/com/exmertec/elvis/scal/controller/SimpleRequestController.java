@@ -5,11 +5,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class TestController {
+public class SimpleRequestController {
 
-    @RequestMapping("test")
-    public String loadTestPage() {
-        return "test";
+    @RequestMapping("hello")
+    public String loadHelloPage() {
+        return "hello";
     }
 }
 

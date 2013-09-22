@@ -13,7 +13,20 @@ repositories {
 dependencies {
     providedCompile 'javax.servlet:servlet-api:2.5'
     compile 'org.springframework:spring-webmvc:3.2.4.RELEASE'
+    compile 'org.springframework:spring-orm:3.2.4.RELEASE'
     runtime 'javax.servlet:jstl:1.1.2'
+
+    compile 'org.hibernate:hibernate-core:4.2.4.Final'
+    runtime 'mysql:mysql-connector-java:5.1.26'
+    runtime 'org.javassist:javassist:3.18.0-GA'
+
+    compile 'log4j:log4j:1.2.17'
+    compile 'org.slf4j:slf4j-log4j12:1.6.1'
+
+    compile 'com.google.guava:guava:14.0'
+    compile 'joda-time:joda-time:2.2'
+
+    testCompile 'junit:junit:4.11'
 }
 
 task wrapper(type: Wrapper) {
