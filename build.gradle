@@ -1,15 +1,19 @@
-allprojects {
-    apply plugin: 'idea'
-    apply plugin: 'maven'
+apply plugin: 'idea'
+apply plugin: 'maven'
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+group = 'com.exmertec.elvis.scal'
+version = '0.0.1'
+
+repositories {
+    mavenCentral()
 }
 
-subprojects {
-    group = 'com.exmertec.elvis.scal'
-    version = '0.0.1'
-
-    repositories {
-        mavenCentral()
-    }
+dependencies {
+    providedCompile 'javax.servlet:servlet-api:2.5'
+    compile 'org.springframework:spring-webmvc:3.2.4.RELEASE'
+    runtime 'javax.servlet:jstl:1.1.2'
 }
 
 task wrapper(type: Wrapper) {
