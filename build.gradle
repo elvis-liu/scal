@@ -33,3 +33,4 @@ task wrapper(type: Wrapper) {
     gradleVersion = '1.4'
 }
 
+jettyRun.jettyConfig=new File("src/main/resources/jetty.xml")
